@@ -4,6 +4,8 @@
 
 This project exists to close the gap between "I know the six pillars" and "I can actually design, review, and improve complex AI systems using the framework."
 
+**GitHub:** https://github.com/deliverydriver/aws-well-architected-ai
+
 ## Why This Strengthens Applications
 
 The Well-Architected Framework is one of the most practical and frequently referenced parts of the Solutions Architect Professional exam and real consulting work.
