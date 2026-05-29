@@ -46,3 +46,30 @@ These reviews are the analytical layer on top of the concrete implementations in
 ---
 
 The value is in the precision of the analysis and the willingness to revise earlier decisions when reality disagrees with the model. This is reference material for people who are already building these classes of system.
+
+## Services and Patterns for Demonstrating Depth
+
+To show real fluency with the Well-Architected Framework on difficult, emerging workloads, this project will include rigorous, versioned reviews that go far beyond generic pillar checklists. The reviews will demonstrate deep, hands-on experience with:
+
+**Well-Architected Framework Applied at Depth**
+- Multiple full, evolving reviews of the architectures in aws-agent-platform and aws-landing-zone-for-ai (and sovereign patterns), updated across versions as real operational data comes in.
+- Explicit "Agentic Systems Lens" guidance that extends the standard Framework for non-determinism, long-running state, human oversight as a reliability control, trajectory capture for audit/compliance, and cost volatility from inference.
+- Quantitative elements in reviews: p99 agent turn latency, cost per successful task, mean time between human interventions, inference spend distribution, recovery time for stateful agents, etc.
+- Honest trade-off analysis between pillars (e.g., Reliability vs Cost when using provisioned throughput vs on-demand; Security vs Performance when routing everything through approval proxies).
+
+**Specific AWS Services & Features Used in Reviews**
+- Heavy, opinionated use of X-Ray + OpenTelemetry for capturing full agent trajectories (model calls, tool invocations, state transitions, human decisions) — not just basic request tracing.
+- AWS Cost and Usage Report (CUR) + Athena + custom attribution logic as core inputs to cost pillar reviews, including real (anonymized) spend analysis for different agent patterns.
+- CloudWatch + Evidently or custom evaluation pipelines for operational excellence and reliability reviews of non-deterministic systems.
+- AWS Config, Security Hub, GuardDuty, and Access Analyzer findings as primary data for security pillar reviews.
+- Step Functions, EventBridge, and ECS/EKS service mesh / VPC Lattice patterns evaluated for reliability and operational excellence.
+- Bedrock Guardrails, Model Invocation Logging, and SageMaker Model Monitor / Clarify as concrete controls in security, reliability, and cost reviews.
+- Cross-account and cross-OU patterns (from the landing zone) analyzed for their impact on every pillar.
+
+**Documentation That Proves Real Experience**
+- Full pillar-by-pillar reviews with specific findings, risk ratings, and prioritized remediations tied to actual AWS features.
+- Before/after architecture comparisons with measured impact.
+- "What we got wrong the first time" sections with real lessons.
+- Custom Well-Architected tooling or lenses developed for agentic workloads.
+
+This becomes one of the strongest signals of deep architectural thinking and operational maturity.
